@@ -30,7 +30,7 @@
                                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                         </ul>
                         <span class="navbar-text">
-                            <a data-toggle="modal" data-target="#loginModal">
+                            <a id="loginbutton">
                                 <span class="fa fa-sign-in"></span> Login
                             </a>
                         </span>
@@ -59,7 +59,7 @@
                             <div class="col-sm-auto">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
+                                    <label class="form-check-label"><b> Remember me </b>
                                     </label>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
                     <img src="./img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a role="button" data-toggle="modal" data-target="#reservemodal" class="btn btn-warning btn-sm btn-block nav-link">Reserve Table</a>
+                    <a role="button" id="reservebutton" class="btn btn-warning btn-sm btn-block nav-link">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -327,6 +327,21 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function(){
+            $("#loginbutton").click(function(){
+                $("#loginModal").modal('toggle');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#reservebutton").click(function(){
+                $("#reservemodal").modal('toggle');
+            });
+        });
+        </script>
+        
 </body>
 
 </html>
